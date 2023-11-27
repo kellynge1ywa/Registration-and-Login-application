@@ -1,0 +1,14 @@
+d:\Teach2Give\assignments\Account\bin\Debug\net8.0\Account.exe
+d:\Teach2Give\assignments\Account\bin\Debug\net8.0\Account.deps.json
+d:\Teach2Give\assignments\Account\bin\Debug\net8.0\Account.runtimeconfig.json
+d:\Teach2Give\assignments\Account\bin\Debug\net8.0\Account.dll
+d:\Teach2Give\assignments\Account\bin\Debug\net8.0\Account.pdb
+d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.GeneratedMSBuildEditorConfig.editorconfig
+d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.AssemblyInfoInputs.cache
+d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.AssemblyInfo.cs
+d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.csproj.CoreCompileInputs.cache
+d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.dll
+d:\Teach2Give\assignments\Account\obj\Debug\net8.0\refint\Account.dll
+d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.pdb
+d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.genruntimeconfig.cache
+d:\Teach2Give\assignments\Account\obj\Debug\net8.0\ref\Account.dll
