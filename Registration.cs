@@ -1,71 +1,35 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Account
+namespace registrationsystem
 {
-    public class Registration
+    public class Action
     {
-        public void Register(){
-            var pathName=@"D:\Teach2Give\assignments\Account\Registrations";
-            Directory.CreateDirectory(pathName);
+        public static void Registraton (string username , string password , string path){
+            File.WriteAllText(path,username);
+            File.AppendAllText(path,"\n");
+            File.AppendAllText(path,password);
+        }
+        public static Dictionary<string,object> Login(string username , string password , string path){
 
-            var filePath= @"D:\Teach2Give\assignments\Account\Registrations\data1.txt";
-            //  File.Create(filePath);
-            Console.WriteLine("Enter username: ");
-            string Username=Console.ReadLine();
-            File.WriteAllText(filePath,Username);
-            File.AppendAllText(filePath,"\n");
-            Console.WriteLine("Enter password: ");
-            string Password=Console.ReadLine();
-            File.AppendAllText(filePath,Password);
-
-
-
-
-            // Console.WriteLine($"Username:{Username}");
-            // Console.WriteLine($"Password: {Password}");
-
-            
+            string[] data = File.ReadAllLines(path);
            
-            
-        }
-
-        public Dictionary<string,object> Login(){
-            var filePath= @"D:\Teach2Give\assignments\Account\Registrations\data1.txt";
-        
             bool isMatch = false;
-            string[] data=File.ReadAllLines(filePath);
-
-            Console.WriteLine("Enter username: ");
-            string Username=Console.ReadLine();
-            
-            
-            Console.WriteLine("Enter password: ");
-            string Password=Console.ReadLine();
-            
-
             for (int i = 0; i < data.Length; i++)
-            {
-                bool isUserNameMatch = Username.Equals(data[0]);
-                bool isUserPassMatch = Password.Equals(data[1]);
-                // Console.WriteLine(isUserNameMatch);
-                // Console.WriteLine(isUserPassMatch);
+            { 
+                isMatch = (data[0] == username && data[1] == password) ? true : false;
 
-              isMatch =  (isUserNameMatch && isUserPassMatch) ? true : false;
-            
+                Console.WriteLine(data[0] == username);
+                Console.WriteLine(data[1] == password);
+
             }
-            Dictionary<string,object> user = new Dictionary<string, object>();
+
+            Dictionary<string,object> user = new Dictionary<string,object>();
+            user.Add("username",username);
             user.Add("isMatch",isMatch);
-            user.Add("username",Username);
 
-
-            return user;
-    
-
+            return user;   
         }
-
         
     }
+    
 }
