@@ -1,71 +1,89 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Account
+namespace registrationsystem
 {
-    public class Registration
+    public class Action
     {
-        public void Register(){
-            var pathName=@"D:\Teach2Give\assignments\Account\Registrations";
-            Directory.CreateDirectory(pathName);
-
-            var filePath= @"D:\Teach2Give\assignments\Account\Registrations\data1.txt";
-            //  File.Create(filePath);
-            Console.WriteLine("Enter username: ");
-            string Username=Console.ReadLine();
-            File.WriteAllText(filePath,Username);
-            File.AppendAllText(filePath,"\n");
-            Console.WriteLine("Enter password: ");
-            string Password=Console.ReadLine();
-            File.AppendAllText(filePath,Password);
-
-
-
-
-            // Console.WriteLine($"Username:{Username}");
-            // Console.WriteLine($"Password: {Password}");
-
+        public static void Registraton (string username , string password, int UserId , string path){
+            Dictionary< string,string> user=new Dictionary<string, string>();
+            user.Add("UserId", UserId.ToString());
+            user.Add("Username",username);
+            user.Add("Password",password);
             
+            File.AppendAllText(path,UserId.ToString());
+            File.AppendAllText(path,"\n");
+            File.AppendAllText(path,username);
+            File.AppendAllText(path,"\n");
+            File.AppendAllText(path,password);
+            File.AppendAllText(path,"\n");
+        }
+        public static Dictionary<string,object> Login(string username , string password , string path){
+
+            string[] data = File.ReadAllLines(path);
            
-            
-        }
-
-        public Dictionary<string,object> Login(){
-            var filePath= @"D:\Teach2Give\assignments\Account\Registrations\data1.txt";
-        
             bool isMatch = false;
-            string[] data=File.ReadAllLines(filePath);
-
-            Console.WriteLine("Enter username: ");
-            string Username=Console.ReadLine();
-            
-            
-            Console.WriteLine("Enter password: ");
-            string Password=Console.ReadLine();
-            
-
+            bool isAdmin = false;
             for (int i = 0; i < data.Length; i++)
-            {
-                bool isUserNameMatch = Username.Equals(data[0]);
-                bool isUserPassMatch = Password.Equals(data[1]);
-                // Console.WriteLine(isUserNameMatch);
-                // Console.WriteLine(isUserPassMatch);
-
-              isMatch =  (isUserNameMatch && isUserPassMatch) ? true : false;
-            
+            { 
+                isMatch = (data[1] == username && data[2] == password) ? true : false;
+                isAdmin = (data[5] == username && data[6] == password) ? true : false;
             }
-            Dictionary<string,object> user = new Dictionary<string, object>();
+
+            Dictionary<string,object> user = new Dictionary<string,object>();
+            user.Add("username",username);
             user.Add("isMatch",isMatch);
-            user.Add("username",Username);
+            user.Add("isAdmin",isAdmin);
+
+            return user;   
+        }
+        public static void createPublicaton (int bookId , string name , string desc , string path){
+            // Write to a file 
 
 
-            return user;
-    
+            File.WriteAllText(path,bookId.ToString());
+            File.AppendAllText(path,"\n");
+            File.AppendAllText(path,name);
+            File.AppendAllText(path,"\n");
+            File.AppendAllText(path,desc);
+
 
         }
+        public static void bookPurchase(string bookId, string path, string userId){
+            var book=File.ReadAllLines(path);
+            for (int i = 0; i < book.Length; i++)
+            {
+                if(book[0] == bookId){
+                    Console.WriteLine($"You have purchased a book");
+                    string ordersPath = @"D:\Teach2Give\assignments\Account\Registrations\orders.txt";
+                    // File.Create(ordersPath);
+                    File.WriteAllText(ordersPath,"\t\t\t\tORDERS\t\t\t \n");
+                    File.AppendAllText(ordersPath,userId);
+                    File.AppendAllText(ordersPath,"\n");
+                    File.AppendAllText(ordersPath,bookId);
 
+                    return;
+                    
+                } else{
+                    Console.WriteLine($"The book does not exist");
+                    return;
+                    
+                }
+            }
+
+
+        }
+        public static string readBookStore (string path){
+
+            var books = File.ReadAllLines(path);
+
+                Console.WriteLine("Book iD :   Book Title \n");
+                Console.WriteLine($"{books[0]} :  {books[1]}");
+
+                string bookId = Console.ReadLine();
+                return bookId;
+
+        }
         
     }
+    
 }

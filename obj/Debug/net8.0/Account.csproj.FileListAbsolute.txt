@@ -12,4 +12,22 @@ d:\Teach2Give\assignments\Account\obj\Debug\net8.0\refint\Account.dll
 d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.pdb
 d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.genruntimeconfig.cache
 d:\Teach2Give\assignments\Account\obj\Debug\net8.0\ref\Account.dll
+<<<<<<< HEAD
 D:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.sourcelink.json
+=======
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\bin\Debug\net8.0\Account.exe
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\bin\Debug\net8.0\Account.deps.json
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\bin\Debug\net8.0\Account.runtimeconfig.json
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\bin\Debug\net8.0\Account.dll
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\bin\Debug\net8.0\Account.pdb
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\Account.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\Account.AssemblyInfoInputs.cache
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\Account.AssemblyInfo.cs
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\Account.csproj.CoreCompileInputs.cache
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\Account.sourcelink.json
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\Account.dll
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\refint\Account.dll
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\Account.pdb
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\Account.genruntimeconfig.cache
+C:\Users\Mophat\OneDrive - Teach2Give\Desktop\Registration-and-Login-application\obj\Debug\net8.0\ref\Account.dll
+>>>>>>> 32a80603432984414ab098643d40fcecb6bbcb8a
