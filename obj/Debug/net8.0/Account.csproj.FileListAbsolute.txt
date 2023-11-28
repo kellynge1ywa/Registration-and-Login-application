@@ -12,3 +12,4 @@ d:\Teach2Give\assignments\Account\obj\Debug\net8.0\refint\Account.dll
 d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.pdb
 d:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.genruntimeconfig.cache
 d:\Teach2Give\assignments\Account\obj\Debug\net8.0\ref\Account.dll
+D:\Teach2Give\assignments\Account\obj\Debug\net8.0\Account.sourcelink.json
