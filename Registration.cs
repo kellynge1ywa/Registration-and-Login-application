@@ -17,10 +17,6 @@ namespace registrationsystem
             for (int i = 0; i < data.Length; i++)
             { 
                 isMatch = (data[0] == username && data[1] == password) ? true : false;
-
-                Console.WriteLine(data[0] == username);
-                Console.WriteLine(data[1] == password);
-
             }
 
             Dictionary<string,object> user = new Dictionary<string,object>();
