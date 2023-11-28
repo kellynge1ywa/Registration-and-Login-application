@@ -21,8 +21,8 @@ class Program
         Action.Registraton(username,password,path);
 
         }else if(option == "2"){
-
-                    // Login the user 
+        Console.WriteLine("Welcome to the Login system \n");
+        // Login the user 
         bool loginStatus = false;
         do {
          string path = @"D:\Teach2Give\assignments\Account\Registrations\data1.txt";
